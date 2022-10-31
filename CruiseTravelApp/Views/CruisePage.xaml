@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CruiseTravelApp.Views.CruisePage"
+             Title="CruisePage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             BackgroundColor="{AppThemeBinding Light=#fafafa, Dark=Black}">
+
+    <ScrollView Margin="0,0,0,-30" VerticalScrollBarVisibility="Never">
+         <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="25,30,0,0">
+             <!-- Greetings & Bell icon-->
+             <Label Grid.Column="0" Grid.Row="0" Text="Hi, Shalima!" FontSize="17"/>
+             <Image Grid.Column="1" Grid.Row="0" Source="bell" HeightRequest="30" WidthRequest="30" Margin="0,0,20,0"/>
+             <!-- Main title-->
+             <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="25" Margin="0,20">
+                 <Label.FormattedText>
+                     <FormattedString>
+                         <Span Text="Choose a " TextColor="{ AppThemeBinding Light=#383838, Dark=White}"/>
+                         <Span Text="Cruise Ship&#10;" TextColor="#625ba5" FontAttributes="Bold" />
+                         <Span Text="to " TextColor="{ AppThemeBinding Light=#383838, Dark=White}"/>
+                         <Span Text="Explore The World" TextColor="#625ba5" FontAttributes="Bold" />
+                     </FormattedString>
+                 </Label.FormattedText> 
+             </Label>
+             <!-- SearchBar-->
+             <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" 
+                     Stroke="Transparent" Padding="0,-20,0,0"> 
+                 <SearchBar Placeholder="Search to find Cruise Ship" BackgroundColor="{ AppThemeBinding Light=#fafafa, Dark=Transparent}" PlaceholderColor="Silver" Margin="0,10,20,0"/>
+             </Border>
+             <!-- American Cruise description-->
+             <Label Grid.Column="0" Grid.Row="3" Text="American Cruise Ship" FontSize="17" />
+             <Label Grid.Column="1" Grid.Row="3" Text="See All" Padding="0,0,30,0" TextColor="#625ba5" HorizontalTextAlignment="End"/>
+             <!--American Cruise Ship List-->
+                   <syncfusion:SfListView Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,10,0,0"
+                        ItemsSource="{Binding Cruise}"
+                        ItemSize="190" ItemSpacing="5"
+                        ScrollBarVisibility="Never"
+                        HeightRequest="280"
+                        HorizontalOptions="Start"
+                        Orientation="Horizontal">
+                            <syncfusion:SfListView.ItemTemplate>
+                                <DataTemplate> 
+                                     <Frame CornerRadius="10" BorderColor="Transparent" Padding="10,0,0,0" IsClippedToBounds="True" HorizontalOptions="Start" BackgroundColor="{ AppThemeBinding Light=White, Dark=#1c1c1f}">
+                                         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Grid.ColumnDefinitions="Auto,*" RowSpacing="10">
+                                             <!-- Main picture-->
+                                             <Image Grid.Column="0" Margin="-10,0" Grid.Row="0" Grid.ColumnSpan="2" Source="{Binding Picture}" WidthRequest="200" Aspect="AspectFill" HeightRequest="100"/>
+                                             <!-- Cruise's name-->
+                                             <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Name}" FontAttributes="Bold"/>
+                                             <!-- Rating-->
+                                             <Image Grid.Column="0" Grid.Row="2" Source="star" HeightRequest="20" WidthRequest="20" />
+                                             <Label Grid.Column="1" Grid.Row="2" Text="{Binding Rate}" Padding="5,0,0,0" TextColor="#B9B9B4"/>
+                                              <!-- Location-->
+                                             <Image Grid.Column="0" Grid.Row="3" Source="location" HeightRequest="20" WidthRequest="20" Aspect="AspectFill"/>
+                                             <Label Grid.Column="1" Grid.Row="3" Text="{Binding Location}" Padding="5,0,0,0" TextColor="#B9B9B4"/>
+                                             <!-- Starting From -->
+                                             <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Text="Starting from" FontSize="13" TextColor="#B9B9B4"/>
+                                             <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Text="{Binding StartingFrom}" FontSize="18" FontAttributes="Bold" TextColor="#7c77b4"/>
+                                        </Grid> 
+                                     </Frame>
+                                 </DataTemplate>
+                            </syncfusion:SfListView.ItemTemplate>
+                  </syncfusion:SfListView>
+             
+             <!-- Europe Cruise Ship description-->
+             <Label Grid.Column="0" Grid.Row="5" Text="Europe Cruise Ship" FontSize="17"/>
+             <Label Grid.Column="1" Grid.Row="5" Text="See All" Padding="0,0,30,0" TextColor="#625ba5" HorizontalTextAlignment="End"/>
+             
+             <!--Europe Cruise Ship List-->
+             <syncfusion:SfListView Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Margin="0,10,0,0"
+                        ItemsSource="{Binding EuropeCruise}"
+                        ItemSize="190" ItemSpacing="5"
+                        ScrollBarVisibility="Never"
+                        HeightRequest="280"
+                        HorizontalOptions="Start"
+                        Orientation="Horizontal">
+                            <syncfusion:SfListView.ItemTemplate>
+                                <DataTemplate> 
+                                     <Frame CornerRadius="10" BorderColor="Transparent" Padding="10,0,0,0" IsClippedToBounds="True" HorizontalOptions="Start" BackgroundColor="{ AppThemeBinding Light=White, Dark=#1c1c1f}">
+                                         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Grid.ColumnDefinitions="Auto,*" RowSpacing="10">
+                                             <!-- Main picture-->
+                                             <Image Grid.Column="0" Margin="-10,0" Grid.Row="0" Grid.ColumnSpan="2" Source="{Binding Picture}" Aspect="AspectFill" HeightRequest="100" WidthRequest="200"/>
+                                             <!-- Cruise's name-->
+                                             <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Name}" FontAttributes="Bold"/>
+                                             <!-- Rating-->
+                                             <Image Grid.Column="0" Grid.Row="2" Source="star" HeightRequest="20" WidthRequest="20" />
+                                             <Label Grid.Column="1" Grid.Row="2" Text="{Binding Rate}" Padding="5,0,0,0" TextColor="#B9B9B4"/>
+                                              <!-- Location-->
+                                             <Image Grid.Column="0" Grid.Row="3" Source="location" HeightRequest="20" WidthRequest="20" Aspect="AspectFill"/>
+                                             <Label Grid.Column="1" Grid.Row="3" Text="{Binding Location}" Padding="5,0,0,0" TextColor="#B9B9B4"/>
+                                             <!-- Starting From -->
+                                             <Label Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Text="Starting from" FontSize="13" TextColor="#B9B9B4"/>
+                                             <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Text="{Binding StartingFrom}" FontSize="18" FontAttributes="Bold" TextColor="#7c77b4"/>
+                                   
+                                         </Grid> 
+                                     </Frame>
+                                 </DataTemplate>
+                            </syncfusion:SfListView.ItemTemplate>
+                  </syncfusion:SfListView> 
+         </Grid>
+    </ScrollView>
+</ContentPage>

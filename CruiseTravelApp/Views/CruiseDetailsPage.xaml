@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CruiseTravelApp.Views.CruiseDetailsPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             Title="CruiseDetailsPage">
+    <Grid RowDefinitions="Auto,*">
+        <Image Grid.Row="0" Source="cruise" Aspect="AspectFill" HeightRequest="350" Margin="0,-50,0,0"/>
+        <Frame Grid.Row="1" CornerRadius="30" Margin="0,-30,0,0" VerticalOptions="FillAndExpand" BorderColor="Transparent">
+            <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,*,Auto,Auto,Auto,Auto" Margin="0,20" RowSpacing="10" Padding="15,0">
+                <!--Name-->
+                <Label Grid.Column="0" Grid.Row="0" Text="Harmony of the Seas" FontAttributes="Bold" FontSize="18" TextColor="{AppThemeBinding Light=#303030, Dark=White}"/>
+                <!-- Location-->
+                <Label Grid.Column="0" Grid.Row="1" Text="Los Angeles, USA" TextColor="#aeaeb2"/>
+                <!-- Description-->
+                <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" TextColor="#565659" LineHeight="1.5" Padding="0,0,0,20" Text="Harmony of the Seas is an Oasis-class cruise ship built by STX France at the Chantiers de l'Atlanthique shipyard in Saint-Nazaire, France. [citation needed] for Royal Caribbean International. With a gross tonnage of 226,963 GT, She is the second largest passenger ship in the  world, surpassing her older sisters Oasis of the Seas."/> 
+                 <!-- Price American Trip Description-->
+                <Label Grid.Column="0" Grid.Row="3" Text="Price American Trip" FontSize="17"/>
+                <Label Grid.Column="1" Grid.Row="3" Text="See All" TextColor="#625ba5" HorizontalTextAlignment="End"/>
+                <!-- List-->
+                <syncfusion:SfListView Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Plan}" 
+                        ScrollBarVisibility="Never"
+                        HeightRequest="85" 
+                        HorizontalOptions="Start">
+                            <syncfusion:SfListView.ItemTemplate>
+                                <DataTemplate> 
+                                    <Grid ColumnDefinitions="Auto,Auto,*">
+                                        <CheckBox Grid.Column="0" Color="#5b50b2"  HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                                        <Label Grid.Column="1" Text="{Binding Name}" VerticalTextAlignment="Center" />
+                                        <Label Grid.Column="2" HorizontalTextAlignment="End" VerticalTextAlignment="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding Price}" TextColor="#5b50b2" FontAttributes="Bold" FontSize="25"/>
+                                                    <Span Text=" per trip" TextColor="#a9a9a9"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </Grid> 
+                                </DataTemplate>
+                            </syncfusion:SfListView.ItemTemplate>
+                  </syncfusion:SfListView>
+                
+                <!--Separator & Button-->
+                <BoxView Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#d8d5d5" Margin="-35,10"/>
+                <Button Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="#594ad5" TextColor="White" Text="Booking Now" FontAttributes="Bold" HeightRequest="60" FontSize="16" CornerRadius="13"/>
+        
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>
