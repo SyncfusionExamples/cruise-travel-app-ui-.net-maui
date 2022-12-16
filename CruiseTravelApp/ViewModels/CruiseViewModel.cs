@@ -27,18 +27,17 @@ namespace CruiseTravelApp.ViewModels
             get { return planCollection; }
             set { planCollection = value; }
         }
-        internal void GenerateInfo()
-        {
+        internal void GenerateInfo() {
             // American Cruise
             cruiseCollection = new ObservableCollection<Cruise>();
             cruiseCollection.Add(new Cruise { Picture = "cruise1", Name = "Harmony of the Seas", Rate = "4.7/5 Rating", Location = "Los Angeles, USA", StartingFrom = "$8000-$50.000" });
-            cruiseCollection.Add(new Cruise { Picture = "cruise2", Name = "Ocean Oriion Viking", Rate = "4.7/5 Rating", Location = "Pennsylvania, USA", StartingFrom = "$3000-$20.000" });
+            cruiseCollection.Add(new Cruise { Picture = "cruise2", Name = "Ocean Orion Viking", Rate = "4.7/5 Rating", Location = "Pennsylvania, USA", StartingFrom = "$3000-$20.000" });
             cruiseCollection.Add(new Cruise { Picture = "cruise1", Name = "Harmony of the Seas", Rate = "4.7/5 Rating", Location = "Los Angeles, USA", StartingFrom = "$8000-$50.000" });
             // Europe Cruise
             europeCruiseCollection = new ObservableCollection<EuropeCruise>();
-            europeCruiseCollection.Add(new EuropeCruise { Picture = "cruise3", Name = "RMS Titanic", Rate = "4.7/5 Rating", Location = "SouthamptoN, UK", StartingFrom = "$8000-$50.000" });
-            europeCruiseCollection.Add(new EuropeCruise { Picture = "cruise4", Name = "Caribean Skylight", Rate = "4.7/5 Rating", Location = "Pennsylvania, USA", StartingFrom = "$3000-$20.000" });
-            europeCruiseCollection.Add(new EuropeCruise { Picture = "cruise3", Name = "RMS Titanic", Rate = "4.7/5 Rating", Location = "SouthamptoN, UK", StartingFrom = "$8000-$50.000" });
+            europeCruiseCollection.Add(new EuropeCruise { Picture = "cruise3", Name = "RMS Titanic", Rate = "4.7/5 Rating", Location = "Southampton, UK", StartingFrom = "$8000-$50.000" });
+            europeCruiseCollection.Add(new EuropeCruise { Picture = "cruise4", Name = "Caribbean Skylight", Rate = "4.7/5 Rating", Location = "Pennsylvania, USA", StartingFrom = "$3000-$20.000" });
+            europeCruiseCollection.Add(new EuropeCruise { Picture = "cruise3", Name = "RMS Titanic", Rate = "4.7/5 Rating", Location = "Southampton, UK", StartingFrom = "$8000-$50.000" });
             // Plan
             planCollection = new ObservableCollection<Plan>();
             planCollection.Add(new Plan { Name = "Regular", Price = "$8000" });
