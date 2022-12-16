@@ -27,10 +27,10 @@
                      Stroke="Transparent" Padding="0,-20,0,0"> 
                  <SearchBar Placeholder="Search to find Cruise Ship" BackgroundColor="{ AppThemeBinding Light=#fafafa, Dark=Transparent}" PlaceholderColor="Silver" Margin="0,10,20,0"/>
              </Border>
-             <!-- American Cruise description-->
-             <Label Grid.Column="0" Grid.Row="3" Text="American Cruise Ship" FontSize="17" />
+             <!-- American Cruise Ships Description-->
+             <Label Grid.Column="0" Grid.Row="3" Text="American Cruise Ships" FontSize="17" />
              <Label Grid.Column="1" Grid.Row="3" Text="See All" Padding="0,0,30,0" TextColor="#625ba5" HorizontalTextAlignment="End"/>
-             <!--American Cruise Ship List-->
+             <!--American Cruise Ships List-->
                    <syncfusion:SfListView Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,10,0,0"
                         ItemsSource="{Binding Cruise}"
                         ItemSize="190" ItemSpacing="5"

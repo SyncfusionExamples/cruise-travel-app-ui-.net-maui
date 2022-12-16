@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{EA7462F4-E025-436D-91A7-70346C878772}|Default">
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D025FF4C-9293-4CBC-901E-5A4332C2C730" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CruiseTravelApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D025FF4C-9293-4CBC-901E-5A4332C2C730" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CruiseTravelApp/Views/CruiseDetailsPage.xaml">
+    <Files>
+      <File FileName="CruiseTravelApp/Views/CruisePage.xaml" Line="32" Column="19" />
+      <File FileName="CruiseTravelApp/ViewModels/CruiseViewModel.cs" Line="41" Column="148" />
+      <File FileName="CruiseTravelApp/AppShell.xaml" Line="1" Column="1" />
+      <File FileName="CruiseTravelApp/App.xaml.cs" Line="9" Column="41" />
+      <File FileName="CruiseTravelApp/MauiProgram.cs" Line="1" Column="1" />
+      <File FileName="CruiseTravelApp/Views/CruiseDetailsPage.xaml" Line="44" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CruiseTravelApp" expanded="True" selected="True">
+            <Node name="CruiseTravelApp" expanded="True">
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
