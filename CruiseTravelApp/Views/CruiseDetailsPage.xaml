@@ -17,6 +17,7 @@
                  <!-- Price American Trip Description-->
                 <Label Grid.Column="0" Grid.Row="3" Text="Price American Trip" FontSize="17"/>
                 <Label Grid.Column="1" Grid.Row="3" Text="See All" TextColor="#625ba5" HorizontalTextAlignment="End"/>
+
                 <!-- List-->
                 <syncfusion:SfListView Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"
                         ItemsSource="{Binding Plan}" 
@@ -40,12 +41,10 @@
                                 </DataTemplate>
                             </syncfusion:SfListView.ItemTemplate>
                   </syncfusion:SfListView>
-                
+
                 <!--Separator adn Button-->
                 <BoxView Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="#d8d5d5" Margin="-35,10"/>
                 <Button Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="#594ad5" TextColor="White" Text="Book Now" FontAttributes="Bold" HeightRequest="60" FontSize="16" CornerRadius="13"/>
-
-
             </Grid>
         </Frame>
     </Grid>

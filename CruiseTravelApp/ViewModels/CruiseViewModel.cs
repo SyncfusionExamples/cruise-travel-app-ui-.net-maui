@@ -27,9 +27,7 @@ namespace CruiseTravelApp.ViewModels
             get { return planCollection; }
             set { planCollection = value; }
         }
-        internal void GenerateInfo()
-        {
-
+        internal void GenerateInfo() {
             // American Cruise
             cruiseCollection = new ObservableCollection<Cruise>();
             cruiseCollection.Add(new Cruise { Picture = "cruise1", Name = "Harmony of the Seas", Rate = "4.7/5 Rating", Location = "Los Angeles, USA", StartingFrom = "$8000-$50.000" });
